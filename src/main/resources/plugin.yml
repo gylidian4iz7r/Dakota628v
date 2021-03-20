@@ -1,0 +1,8 @@
+name: FartingSquid
+main: net.dasigns.fartingsquid
+version: ${version}
+authors: [Dakota628]
+commands:
+   fartingsquid:
+      description: Spawns a farting squid for you to ride.
+      usage: /fartingsquid
