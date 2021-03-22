@@ -4,7 +4,7 @@
     <groupId>net.dasigns.fartingSquid</groupId>
     <artifactId>FartingSquid</artifactId>
     <version>0.1</version>
-    <name>FartingSquid</name>
+    <name>net.dasigns.fartingsquid.FartingSquid</name>
     <url>http://portfolio.dasigns.net/</url>
     <repositories>
         <repository>

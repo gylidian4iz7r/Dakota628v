@@ -1,3 +1,5 @@
+package net.dasigns.fartingsquid;
+
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Squid;
 import org.bukkit.event.EventHandler;
