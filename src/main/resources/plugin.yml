@@ -1,5 +1,5 @@
 name: FartingSquid
-main: net.dasigns.fartingsquid
+main: net.dasigns.fartingsquid.FartingSquid
 version: ${version}
 authors: [Dakota628]
 commands:
