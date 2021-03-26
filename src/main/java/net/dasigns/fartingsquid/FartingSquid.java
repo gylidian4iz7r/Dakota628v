@@ -36,6 +36,7 @@ public class FartingSquid extends JavaPlugin {
     public void spawnSquid(Player p) {
         Location l = p.getLocation();
         Squid s = (Squid) l.getWorld().spawnEntity(l, EntityType.SQUID);
+        addFartingSquid(s);
         s.setPassenger(p);
     }
 
