@@ -18,8 +18,10 @@ public class FartingSquidCommands implements CommandExecutor {
         if(command.getName().equalsIgnoreCase("fartingsquid")) {
             if(commandSender instanceof Player) {
                 Player p = (Player) commandSender;
-                FartingSquid.getInstance().spawnSquid(p);
-                return true;
+                if(p.hasPermission("fartingsquid.spawn")) {
+                    FartingSquid.getInstance().spawnSquid(p);
+                    return true;
+                }
             }
         }
         return false;

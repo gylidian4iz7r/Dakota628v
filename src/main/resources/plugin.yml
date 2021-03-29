@@ -6,3 +6,7 @@ commands:
    fartingsquid:
       description: Spawns a farting squid for you to ride.
       usage: /fartingsquid
+permissions:
+    fartingsquid.spawn:
+        description: Gives you access to spawning a fartingsquid
+        default: op
