@@ -1,14 +1,30 @@
+/*
+    Copyright 2013 Dakota Baber (Dakota628)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+ */
+
 package net.dasigns.fartingsquid;
 
-import org.bukkit.Effect;
-import org.bukkit.EntityEffect;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
-import org.bukkit.entity.*;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Item;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.Squid;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitTask;
 import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
@@ -51,7 +67,7 @@ public class FartingSquid extends JavaPlugin {
         Runnable squidMove = new Runnable() {
             public void run() {
                 if (s == null || s.getPassenger() == null || !(s.getPassenger() instanceof Player)) {
-                    if(getFartingSquids().contains(s)) removeFartingSquid(s);
+                    if (getFartingSquids().contains(s)) removeFartingSquid(s);
                     return;
                 }
 
@@ -77,8 +93,8 @@ public class FartingSquid extends JavaPlugin {
                 }
 
                 //Clear ground items near us
-                for(Item i : s.getWorld().getEntitiesByClass(Item.class)) {
-                    if(i.getLocation().distance(s.getLocation()) <= 25) {
+                for (Item i : s.getWorld().getEntitiesByClass(Item.class)) {
+                    if (i.getLocation().distance(s.getLocation()) <= 25) {
                         i.remove();
                     }
                 }
